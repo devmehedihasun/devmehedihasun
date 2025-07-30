@@ -3,7 +3,7 @@ WordPress Theme Developer | Frontend Developer
 
 Hi, I'm Mehedi Hasan from Dhaka, Bangladesh.
 I have 2.5+ years of experience in web development, specializing in WordPress and Frontend Development.
-Previously, I worked at Softvence Agency, where I successfully built over 200 websites with 95% client satisfaction and 70% 5-star ratings.
+Previously, I worked at IT Agency, where I successfully built over 200 websites with 95% client satisfaction and 70% 5-star ratings.
 Currently, I am working at SoftCrafty, a software company, as a WordPress Theme Developer.
 
 Currently, I am sharpening my skills in:
