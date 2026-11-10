@@ -140,9 +140,9 @@ const mehedi = {
 ## 🤝 Connect With Me
 
 <p align="center">
-  <a href="https://devmh.com/"><img src="https://img.shields.io/badge/Portfolio-9ece6a?style=for-the-badge&logo=google-chrome&logoColor=1a1b27" alt="Portfolio" /></a>
+  <a href="https://devmehedihasun.github.io/wpmehedi-portfolio/"><img src="https://img.shields.io/badge/Portfolio-9ece6a?style=for-the-badge&logo=google-chrome&logoColor=1a1b27" alt="Portfolio" /></a>
   <a href="https://x.com/Mahedih44930089"><img src="https://img.shields.io/badge/X_(Twitter)-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
-  <a href="https://www.facebook.com/share/1C6GCm8PeX/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
+  <a href="https://www.facebook.com/profile.php?id=61595266090510"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
   <a href="https://github.com/devmehedihasun"><img src="https://img.shields.io/badge/GitHub-24283b?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </p>
 
