@@ -1,107 +1,459 @@
-<!-- ===== HEADER BANNER ===== -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:236ad3,100:55960c&height=200&section=header&text=Mehedi%20Hasan&fontColor=ffffff&fontSize=50&animation=fadeIn&fontAlignY=38&desc=WordPress%20Theme%20Developer%20%7C%20Frontend%20Developer&descAlignY=58&descSize=18" />
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spider Banner Preview</title>
+<style>
+  body{margin:0;background:#0d1117;color:#c9d1d9;
+       font:15px/1.6 -apple-system,"Segoe UI",Ubuntu,sans-serif;padding:24px}
+  .wrap{max-width:1000px;margin:0 auto}
+  h2{color:#58a6ff;font-size:15px;margin:28px 0 10px;
+     border-bottom:1px solid #21262d;padding-bottom:6px}
+  svg{max-width:100%;height:auto;display:block}
+  .note{color:#8b949e;font-size:13px}
+  .light{background:#fff;padding:12px;border-radius:12px;margin-top:8px}
+</style></head><body><div class="wrap">
+<h2>Animated banner &mdash; dark background (GitHub dark mode)</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"
+     width="1000" height="300" role="img"
+     aria-label="Animated spider web banner for Mehedi Hasan">
+  <title>Mehedi Hasan — WordPress Theme Developer &amp; Frontend Developer</title>
 
-<!-- ===== TYPING ANIMATION ===== -->
-<div align="center">
-  <a href="https://github.com/devmehedihasun">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=236AD3&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Mehedi+Hasan;WordPress+Theme+Developer;Frontend+Developer+%7C+React+%7C+GSAP;Based+in+Dhaka%2C+Bangladesh+%F0%9F%87%A7%F0%9F%87%A9" alt="Typing SVG" />
-  </a>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1b27" />
+      <stop offset="100%" stop-color="#24283b" />
+    </linearGradient>
+    <radialGradient id="abdomen" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#bb9af7" />
+      <stop offset="100%" stop-color="#4c3d8f" />
+    </radialGradient>
+    <radialGradient id="head" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#7aa2f7" />
+      <stop offset="100%" stop-color="#3b5ea8" />
+    </radialGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7aa2f7" />
+      <stop offset="50%" stop-color="#bb9af7" />
+      <stop offset="100%" stop-color="#7dcfff" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .webline { stroke: #3b4261; stroke-width: 1.1; fill: none; opacity: .75; }
+    .leg { stroke: #7aa2f7; stroke-width: 2.6; fill: none;
+            stroke-linecap: round; stroke-linejoin: round; }
+    .thread { stroke: #565f89; stroke-width: 1.2; }
+    .dew { fill: #7dcfff; animation: twinkle 3.2s ease-in-out infinite; }
+    @keyframes twinkle {
+      0%, 100% { opacity: .25; }
+      50%      { opacity: .95; }
+    }
+    .name { font: 700 40px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+             fill: url(#name); letter-spacing: 1px; }
+    .role { font: 500 16px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+             fill: #c0caf5; letter-spacing: 3.4px; opacity: .88; }
+    .tag  { font: 600 13px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+             fill: #9ece6a; letter-spacing: 1.2px; }
+  </style>
+
+  <rect width="1000" height="300" rx="14" fill="url(#bg)" />
+
+  <!-- ===== corner webs ===== -->
+  <g class="webline">
+      <line x1="0.0" y1="0.0" x2="203.0" y2="28.5" />
+      <line x1="0.0" y1="0.0" x2="191.4" y2="73.5" />
+      <line x1="0.0" y1="0.0" x2="170.0" y2="114.6" />
+      <line x1="0.0" y1="0.0" x2="139.8" y2="149.9" />
+      <line x1="0.0" y1="0.0" x2="102.5" y2="177.5" />
+      <line x1="0.0" y1="0.0" x2="59.9" y2="196.0" />
+      <line x1="0.0" y1="0.0" x2="14.3" y2="204.5" />
+      <path d="M40.6,5.7Q34.1,8.8 38.3,14.7Q31.3,16.3 34.0,22.9Q26.8,22.9 28.0,30.0Q21.0,28.3 20.5,35.5Q14.1,32.3 12.0,39.2Q6.4,34.7 2.9,40.9" />
+      <path d="M81.2,11.4Q68.3,17.7 76.6,29.4Q62.6,32.6 68.0,45.9Q53.6,45.8 55.9,60.0Q41.9,56.7 41.0,71.0Q28.1,64.7 24.0,78.4Q12.9,69.3 5.7,81.8" />
+      <path d="M121.8,17.1Q102.4,26.5 114.8,44.1Q93.8,48.8 102.0,68.8Q80.4,68.7 83.9,90.0Q62.9,85.0 61.5,106.5Q42.2,97.0 36.0,117.6Q19.3,104.0 8.6,122.7" />
+      <path d="M162.4,22.8Q136.5,35.3 153.1,58.8Q125.1,65.1 136.0,91.7Q107.2,91.6 111.8,119.9Q83.9,113.4 82.0,142.0Q56.2,129.3 47.9,156.8Q25.7,138.7 11.4,163.6" />
+      <path d="M203.0,28.5Q170.7,44.1 191.4,73.5Q156.4,81.4 170.0,114.6Q134.1,114.5 139.8,149.9Q104.9,141.7 102.5,177.5Q70.3,161.7 59.9,196.0Q32.1,173.3 14.3,204.5" />
+  </g>
+  <g class="webline">
+      <line x1="1000.0" y1="0.0" x2="987.1" y2="184.5" />
+      <line x1="1000.0" y1="0.0" x2="945.9" y2="176.9" />
+      <line x1="1000.0" y1="0.0" x2="907.5" y2="160.2" />
+      <line x1="1000.0" y1="0.0" x2="873.8" y2="135.3" />
+      <line x1="1000.0" y1="0.0" x2="846.6" y2="103.5" />
+      <line x1="1000.0" y1="0.0" x2="827.3" y2="66.3" />
+      <line x1="1000.0" y1="0.0" x2="816.8" y2="25.7" />
+      <path d="M997.4,36.9Q994.2,31.3 989.2,35.4Q987.3,29.2 981.5,32.0Q981.1,25.6 974.8,27.1Q975.8,20.7 969.3,20.7Q971.8,14.7 965.5,13.3Q969.2,8.0 963.4,5.1" />
+      <path d="M994.8,73.8Q988.4,62.6 978.4,70.8Q974.6,58.4 963.0,64.1Q962.1,51.2 949.5,54.1Q951.6,41.3 938.7,41.4Q943.6,29.4 930.9,26.5Q938.4,15.9 926.7,10.3" />
+      <path d="M992.3,110.7Q982.6,93.9 967.5,106.1Q961.9,87.5 944.5,96.1Q943.2,76.7 924.3,81.2Q927.4,62.0 908.0,62.1Q915.3,44.1 896.4,39.8Q907.6,23.9 890.1,15.4" />
+      <path d="M989.7,147.6Q976.8,125.1 956.7,141.5Q949.2,116.7 926.0,128.2Q924.3,102.3 899.1,108.2Q903.2,82.7 877.3,82.8Q887.1,58.8 861.8,53.0Q876.8,31.9 853.4,20.6" />
+      <path d="M987.1,184.5Q971.0,156.4 945.9,176.9Q936.6,145.9 907.5,160.2Q905.4,127.9 873.8,135.3Q879.0,103.3 846.6,103.5Q858.9,73.5 827.3,66.3Q846.0,39.8 816.8,25.7" />
+  </g>
+  <g>
+      <circle class="dew" cx="64.6" cy="26.2" r="2.2" style="animation-delay:0.0s" />
+      <circle class="dew" cx="74.6" cy="84.5" r="3.1" style="animation-delay:0.7s" />
+      <circle class="dew" cx="136.5" cy="83.3" r="2.2" style="animation-delay:1.4s" />
+      <circle class="dew" cx="31.6" cy="88.8" r="3.1" style="animation-delay:2.1s" />
+      <circle class="dew" cx="91.6" cy="155.4" r="2.2" style="animation-delay:2.8s" />
+  </g>
+  <g>
+      <circle class="dew" cx="980.5" cy="59.8" r="2.2" style="animation-delay:2.1s" />
+      <circle class="dew" cx="928.6" cy="72.5" r="3.1" style="animation-delay:2.8s" />
+      <circle class="dew" cx="933.6" cy="128.1" r="2.2" style="animation-delay:3.5s" />
+      <circle class="dew" cx="922.0" cy="34.1" r="3.1" style="animation-delay:4.2s" />
+      <circle class="dew" cx="865.9" cy="92.3" r="2.2" style="animation-delay:4.9s" />
+  </g>
+
+  <!-- ===== dangling spider: pendulum about the anchor at (500,0) ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      values="-7 500 0; 7 500 0; -7 500 0" dur="5.5s"
+      repeatCount="indefinite" calcMode="spline"
+      keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" />
+
+    <line class="thread" x1="500" y1="0" x2="500" y2="104">
+      <animate attributeName="y2" values="104;116;104" dur="3.1s"
+               repeatCount="indefinite" calcMode="spline"
+               keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" />
+    </line>
+
+    <g transform="translate(500,104)">
+      <animateTransform attributeName="transform" type="translate"
+        values="500,104; 500,116; 500,104" dur="3.1s"
+        repeatCount="indefinite" calcMode="spline"
+        keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" />
+      <g transform="scale(1.25)">
+        <!-- legs behind body -->
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -11.0; 8.0 -7.5 -11.0; -5.6 -7.5 -11.0; 0 -7.5 -11.0" dur="1.6s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-11.0 C-20.5,-31.0 -34.5,-22.0 -45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -5.0; 6.8 -7.5 -5.0; -4.8 -7.5 -5.0; 0 -7.5 -5.0" dur="1.6s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-5.0 C-20.5,-19.0 -39.5,-12.7 -52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 1.0; 5.6 -7.5 1.0; -3.9 -7.5 1.0; 0 -7.5 1.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,1.0 C-20.5,-7.0 -39.5,-3.4 -52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 7.0; 4.4 -7.5 7.0; -3.1 -7.5 7.0; 0 -7.5 7.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,7.0 C-20.5,5.0 -34.5,5.9 -45.0,35.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -11.0; 8.0 7.5 -11.0; -5.6 7.5 -11.0; 0 7.5 -11.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-11.0 C20.5,-31.0 34.5,-22.0 45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -5.0; 6.8 7.5 -5.0; -4.8 7.5 -5.0; 0 7.5 -5.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-5.0 C20.5,-19.0 39.5,-12.7 52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 1.0; 5.6 7.5 1.0; -3.9 7.5 1.0; 0 7.5 1.0" dur="1.6s" begin="0.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,1.0 C20.5,-7.0 39.5,-3.4 52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 7.0; 4.4 7.5 7.0; -3.1 7.5 7.0; 0 7.5 7.0" dur="1.6s" begin="0.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,7.0 C20.5,5.0 34.5,5.9 45.0,35.0" /></g>
+        <!-- abdomen -->
+        <ellipse cx="0" cy="8" rx="13" ry="16" fill="url(#abdomen)" />
+        <path d="M-5,2 Q0,10 5,2 M-6,10 Q0,18 6,10" stroke="#bb9af7"
+              stroke-width="1.4" fill="none" opacity=".55" stroke-linecap="round" />
+        <!-- cephalothorax -->
+        <ellipse cx="0" cy="-10" rx="9.5" ry="8.5" fill="url(#head)" />
+        <!-- eyes -->
+        <circle cx="-3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="-3.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="-3.1;-4.1;-3.1;-2.3;-3.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="4.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="4.1;3.1;4.1;4.9;4.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+        <circle cx="6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== name + role ===== -->
+  <g text-anchor="middle">
+    <text class="name" x="500" y="212">Mehedi Hasan</text>
+    <text class="role" x="500" y="240">WORDPRESS THEME DEVELOPER &#183; FRONTEND DEVELOPER</text>
+    <text class="tag"  x="500" y="266">Dhaka, Bangladesh &#160;&#9679;&#160; 3+ years &#160;&#9679;&#160; 200+ websites shipped</text>
+  </g>
+
+  <!-- ===== little crawlers along the bottom ===== -->
+  <g opacity=".75">
+      <animateTransform attributeName="transform" type="translate"
+        values="-60,288; 1060,288"
+        dur="26s" begin="0s" repeatCount="indefinite" />
+      <g transform="scale(0.42,0.42)"><g transform="scale(1.0)">
+        <!-- legs behind body -->
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -11.0; 8.0 -7.5 -11.0; -5.6 -7.5 -11.0; 0 -7.5 -11.0" dur="1.6s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-11.0 C-20.5,-31.0 -34.5,-22.0 -45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -5.0; 6.8 -7.5 -5.0; -4.8 -7.5 -5.0; 0 -7.5 -5.0" dur="1.6s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-5.0 C-20.5,-19.0 -39.5,-12.7 -52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 1.0; 5.6 -7.5 1.0; -3.9 -7.5 1.0; 0 -7.5 1.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,1.0 C-20.5,-7.0 -39.5,-3.4 -52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 7.0; 4.4 -7.5 7.0; -3.1 -7.5 7.0; 0 -7.5 7.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,7.0 C-20.5,5.0 -34.5,5.9 -45.0,35.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -11.0; 8.0 7.5 -11.0; -5.6 7.5 -11.0; 0 7.5 -11.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-11.0 C20.5,-31.0 34.5,-22.0 45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -5.0; 6.8 7.5 -5.0; -4.8 7.5 -5.0; 0 7.5 -5.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-5.0 C20.5,-19.0 39.5,-12.7 52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 1.0; 5.6 7.5 1.0; -3.9 7.5 1.0; 0 7.5 1.0" dur="1.6s" begin="0.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,1.0 C20.5,-7.0 39.5,-3.4 52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 7.0; 4.4 7.5 7.0; -3.1 7.5 7.0; 0 7.5 7.0" dur="1.6s" begin="0.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,7.0 C20.5,5.0 34.5,5.9 45.0,35.0" /></g>
+        <!-- abdomen -->
+        <ellipse cx="0" cy="8" rx="13" ry="16" fill="url(#abdomen)" />
+        <path d="M-5,2 Q0,10 5,2 M-6,10 Q0,18 6,10" stroke="#bb9af7"
+              stroke-width="1.4" fill="none" opacity=".55" stroke-linecap="round" />
+        <!-- cephalothorax -->
+        <ellipse cx="0" cy="-10" rx="9.5" ry="8.5" fill="url(#head)" />
+        <!-- eyes -->
+        <circle cx="-3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="-3.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="-3.1;-4.1;-3.1;-2.3;-3.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="4.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="4.1;3.1;4.1;4.9;4.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+        <circle cx="6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+      </g></g>
+    </g>
+  <g opacity=".75">
+      <animateTransform attributeName="transform" type="translate"
+        values="1060,292; -60,292"
+        dur="34s" begin="9s" repeatCount="indefinite" />
+      <g transform="scale(-0.34,0.34)"><g transform="scale(1.0)">
+        <!-- legs behind body -->
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -11.0; 8.0 -7.5 -11.0; -5.6 -7.5 -11.0; 0 -7.5 -11.0" dur="1.6s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-11.0 C-20.5,-31.0 -34.5,-22.0 -45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -5.0; 6.8 -7.5 -5.0; -4.8 -7.5 -5.0; 0 -7.5 -5.0" dur="1.6s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-5.0 C-20.5,-19.0 -39.5,-12.7 -52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 1.0; 5.6 -7.5 1.0; -3.9 -7.5 1.0; 0 -7.5 1.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,1.0 C-20.5,-7.0 -39.5,-3.4 -52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 7.0; 4.4 -7.5 7.0; -3.1 -7.5 7.0; 0 -7.5 7.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,7.0 C-20.5,5.0 -34.5,5.9 -45.0,35.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -11.0; 8.0 7.5 -11.0; -5.6 7.5 -11.0; 0 7.5 -11.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-11.0 C20.5,-31.0 34.5,-22.0 45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -5.0; 6.8 7.5 -5.0; -4.8 7.5 -5.0; 0 7.5 -5.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-5.0 C20.5,-19.0 39.5,-12.7 52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 1.0; 5.6 7.5 1.0; -3.9 7.5 1.0; 0 7.5 1.0" dur="1.6s" begin="0.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,1.0 C20.5,-7.0 39.5,-3.4 52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 7.0; 4.4 7.5 7.0; -3.1 7.5 7.0; 0 7.5 7.0" dur="1.6s" begin="0.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,7.0 C20.5,5.0 34.5,5.9 45.0,35.0" /></g>
+        <!-- abdomen -->
+        <ellipse cx="0" cy="8" rx="13" ry="16" fill="url(#abdomen)" />
+        <path d="M-5,2 Q0,10 5,2 M-6,10 Q0,18 6,10" stroke="#bb9af7"
+              stroke-width="1.4" fill="none" opacity=".55" stroke-linecap="round" />
+        <!-- cephalothorax -->
+        <ellipse cx="0" cy="-10" rx="9.5" ry="8.5" fill="url(#head)" />
+        <!-- eyes -->
+        <circle cx="-3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="-3.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="-3.1;-4.1;-3.1;-2.3;-3.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="4.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="4.1;3.1;4.1;4.9;4.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+        <circle cx="6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+      </g></g>
+    </g>
+</svg>
+
+<h2>Same SVG on white (GitHub light mode)</h2>
+<div class="light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"
+     width="1000" height="300" role="img"
+     aria-label="Animated spider web banner for Mehedi Hasan">
+  <title>Mehedi Hasan — WordPress Theme Developer &amp; Frontend Developer</title>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1b27" />
+      <stop offset="100%" stop-color="#24283b" />
+    </linearGradient>
+    <radialGradient id="abdomen" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#bb9af7" />
+      <stop offset="100%" stop-color="#4c3d8f" />
+    </radialGradient>
+    <radialGradient id="head" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#7aa2f7" />
+      <stop offset="100%" stop-color="#3b5ea8" />
+    </radialGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7aa2f7" />
+      <stop offset="50%" stop-color="#bb9af7" />
+      <stop offset="100%" stop-color="#7dcfff" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .webline { stroke: #3b4261; stroke-width: 1.1; fill: none; opacity: .75; }
+    .leg { stroke: #7aa2f7; stroke-width: 2.6; fill: none;
+            stroke-linecap: round; stroke-linejoin: round; }
+    .thread { stroke: #565f89; stroke-width: 1.2; }
+    .dew { fill: #7dcfff; animation: twinkle 3.2s ease-in-out infinite; }
+    @keyframes twinkle {
+      0%, 100% { opacity: .25; }
+      50%      { opacity: .95; }
+    }
+    .name { font: 700 40px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+             fill: url(#name); letter-spacing: 1px; }
+    .role { font: 500 16px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+             fill: #c0caf5; letter-spacing: 3.4px; opacity: .88; }
+    .tag  { font: 600 13px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif;
+             fill: #9ece6a; letter-spacing: 1.2px; }
+  </style>
+
+  <rect width="1000" height="300" rx="14" fill="url(#bg)" />
+
+  <!-- ===== corner webs ===== -->
+  <g class="webline">
+      <line x1="0.0" y1="0.0" x2="203.0" y2="28.5" />
+      <line x1="0.0" y1="0.0" x2="191.4" y2="73.5" />
+      <line x1="0.0" y1="0.0" x2="170.0" y2="114.6" />
+      <line x1="0.0" y1="0.0" x2="139.8" y2="149.9" />
+      <line x1="0.0" y1="0.0" x2="102.5" y2="177.5" />
+      <line x1="0.0" y1="0.0" x2="59.9" y2="196.0" />
+      <line x1="0.0" y1="0.0" x2="14.3" y2="204.5" />
+      <path d="M40.6,5.7Q34.1,8.8 38.3,14.7Q31.3,16.3 34.0,22.9Q26.8,22.9 28.0,30.0Q21.0,28.3 20.5,35.5Q14.1,32.3 12.0,39.2Q6.4,34.7 2.9,40.9" />
+      <path d="M81.2,11.4Q68.3,17.7 76.6,29.4Q62.6,32.6 68.0,45.9Q53.6,45.8 55.9,60.0Q41.9,56.7 41.0,71.0Q28.1,64.7 24.0,78.4Q12.9,69.3 5.7,81.8" />
+      <path d="M121.8,17.1Q102.4,26.5 114.8,44.1Q93.8,48.8 102.0,68.8Q80.4,68.7 83.9,90.0Q62.9,85.0 61.5,106.5Q42.2,97.0 36.0,117.6Q19.3,104.0 8.6,122.7" />
+      <path d="M162.4,22.8Q136.5,35.3 153.1,58.8Q125.1,65.1 136.0,91.7Q107.2,91.6 111.8,119.9Q83.9,113.4 82.0,142.0Q56.2,129.3 47.9,156.8Q25.7,138.7 11.4,163.6" />
+      <path d="M203.0,28.5Q170.7,44.1 191.4,73.5Q156.4,81.4 170.0,114.6Q134.1,114.5 139.8,149.9Q104.9,141.7 102.5,177.5Q70.3,161.7 59.9,196.0Q32.1,173.3 14.3,204.5" />
+  </g>
+  <g class="webline">
+      <line x1="1000.0" y1="0.0" x2="987.1" y2="184.5" />
+      <line x1="1000.0" y1="0.0" x2="945.9" y2="176.9" />
+      <line x1="1000.0" y1="0.0" x2="907.5" y2="160.2" />
+      <line x1="1000.0" y1="0.0" x2="873.8" y2="135.3" />
+      <line x1="1000.0" y1="0.0" x2="846.6" y2="103.5" />
+      <line x1="1000.0" y1="0.0" x2="827.3" y2="66.3" />
+      <line x1="1000.0" y1="0.0" x2="816.8" y2="25.7" />
+      <path d="M997.4,36.9Q994.2,31.3 989.2,35.4Q987.3,29.2 981.5,32.0Q981.1,25.6 974.8,27.1Q975.8,20.7 969.3,20.7Q971.8,14.7 965.5,13.3Q969.2,8.0 963.4,5.1" />
+      <path d="M994.8,73.8Q988.4,62.6 978.4,70.8Q974.6,58.4 963.0,64.1Q962.1,51.2 949.5,54.1Q951.6,41.3 938.7,41.4Q943.6,29.4 930.9,26.5Q938.4,15.9 926.7,10.3" />
+      <path d="M992.3,110.7Q982.6,93.9 967.5,106.1Q961.9,87.5 944.5,96.1Q943.2,76.7 924.3,81.2Q927.4,62.0 908.0,62.1Q915.3,44.1 896.4,39.8Q907.6,23.9 890.1,15.4" />
+      <path d="M989.7,147.6Q976.8,125.1 956.7,141.5Q949.2,116.7 926.0,128.2Q924.3,102.3 899.1,108.2Q903.2,82.7 877.3,82.8Q887.1,58.8 861.8,53.0Q876.8,31.9 853.4,20.6" />
+      <path d="M987.1,184.5Q971.0,156.4 945.9,176.9Q936.6,145.9 907.5,160.2Q905.4,127.9 873.8,135.3Q879.0,103.3 846.6,103.5Q858.9,73.5 827.3,66.3Q846.0,39.8 816.8,25.7" />
+  </g>
+  <g>
+      <circle class="dew" cx="64.6" cy="26.2" r="2.2" style="animation-delay:0.0s" />
+      <circle class="dew" cx="74.6" cy="84.5" r="3.1" style="animation-delay:0.7s" />
+      <circle class="dew" cx="136.5" cy="83.3" r="2.2" style="animation-delay:1.4s" />
+      <circle class="dew" cx="31.6" cy="88.8" r="3.1" style="animation-delay:2.1s" />
+      <circle class="dew" cx="91.6" cy="155.4" r="2.2" style="animation-delay:2.8s" />
+  </g>
+  <g>
+      <circle class="dew" cx="980.5" cy="59.8" r="2.2" style="animation-delay:2.1s" />
+      <circle class="dew" cx="928.6" cy="72.5" r="3.1" style="animation-delay:2.8s" />
+      <circle class="dew" cx="933.6" cy="128.1" r="2.2" style="animation-delay:3.5s" />
+      <circle class="dew" cx="922.0" cy="34.1" r="3.1" style="animation-delay:4.2s" />
+      <circle class="dew" cx="865.9" cy="92.3" r="2.2" style="animation-delay:4.9s" />
+  </g>
+
+  <!-- ===== dangling spider: pendulum about the anchor at (500,0) ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      values="-7 500 0; 7 500 0; -7 500 0" dur="5.5s"
+      repeatCount="indefinite" calcMode="spline"
+      keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" />
+
+    <line class="thread" x1="500" y1="0" x2="500" y2="104">
+      <animate attributeName="y2" values="104;116;104" dur="3.1s"
+               repeatCount="indefinite" calcMode="spline"
+               keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" />
+    </line>
+
+    <g transform="translate(500,104)">
+      <animateTransform attributeName="transform" type="translate"
+        values="500,104; 500,116; 500,104" dur="3.1s"
+        repeatCount="indefinite" calcMode="spline"
+        keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1" />
+      <g transform="scale(1.25)">
+        <!-- legs behind body -->
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -11.0; 8.0 -7.5 -11.0; -5.6 -7.5 -11.0; 0 -7.5 -11.0" dur="1.6s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-11.0 C-20.5,-31.0 -34.5,-22.0 -45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -5.0; 6.8 -7.5 -5.0; -4.8 -7.5 -5.0; 0 -7.5 -5.0" dur="1.6s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-5.0 C-20.5,-19.0 -39.5,-12.7 -52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 1.0; 5.6 -7.5 1.0; -3.9 -7.5 1.0; 0 -7.5 1.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,1.0 C-20.5,-7.0 -39.5,-3.4 -52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 7.0; 4.4 -7.5 7.0; -3.1 -7.5 7.0; 0 -7.5 7.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,7.0 C-20.5,5.0 -34.5,5.9 -45.0,35.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -11.0; 8.0 7.5 -11.0; -5.6 7.5 -11.0; 0 7.5 -11.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-11.0 C20.5,-31.0 34.5,-22.0 45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -5.0; 6.8 7.5 -5.0; -4.8 7.5 -5.0; 0 7.5 -5.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-5.0 C20.5,-19.0 39.5,-12.7 52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 1.0; 5.6 7.5 1.0; -3.9 7.5 1.0; 0 7.5 1.0" dur="1.6s" begin="0.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,1.0 C20.5,-7.0 39.5,-3.4 52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 7.0; 4.4 7.5 7.0; -3.1 7.5 7.0; 0 7.5 7.0" dur="1.6s" begin="0.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,7.0 C20.5,5.0 34.5,5.9 45.0,35.0" /></g>
+        <!-- abdomen -->
+        <ellipse cx="0" cy="8" rx="13" ry="16" fill="url(#abdomen)" />
+        <path d="M-5,2 Q0,10 5,2 M-6,10 Q0,18 6,10" stroke="#bb9af7"
+              stroke-width="1.4" fill="none" opacity=".55" stroke-linecap="round" />
+        <!-- cephalothorax -->
+        <ellipse cx="0" cy="-10" rx="9.5" ry="8.5" fill="url(#head)" />
+        <!-- eyes -->
+        <circle cx="-3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="-3.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="-3.1;-4.1;-3.1;-2.3;-3.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="4.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="4.1;3.1;4.1;4.9;4.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+        <circle cx="6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== name + role ===== -->
+  <g text-anchor="middle">
+    <text class="name" x="500" y="212">Mehedi Hasan</text>
+    <text class="role" x="500" y="240">WORDPRESS THEME DEVELOPER &#183; FRONTEND DEVELOPER</text>
+    <text class="tag"  x="500" y="266">Dhaka, Bangladesh &#160;&#9679;&#160; 3+ years &#160;&#9679;&#160; 200+ websites shipped</text>
+  </g>
+
+  <!-- ===== little crawlers along the bottom ===== -->
+  <g opacity=".75">
+      <animateTransform attributeName="transform" type="translate"
+        values="-60,288; 1060,288"
+        dur="26s" begin="0s" repeatCount="indefinite" />
+      <g transform="scale(0.42,0.42)"><g transform="scale(1.0)">
+        <!-- legs behind body -->
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -11.0; 8.0 -7.5 -11.0; -5.6 -7.5 -11.0; 0 -7.5 -11.0" dur="1.6s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-11.0 C-20.5,-31.0 -34.5,-22.0 -45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -5.0; 6.8 -7.5 -5.0; -4.8 -7.5 -5.0; 0 -7.5 -5.0" dur="1.6s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-5.0 C-20.5,-19.0 -39.5,-12.7 -52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 1.0; 5.6 -7.5 1.0; -3.9 -7.5 1.0; 0 -7.5 1.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,1.0 C-20.5,-7.0 -39.5,-3.4 -52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 7.0; 4.4 -7.5 7.0; -3.1 -7.5 7.0; 0 -7.5 7.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,7.0 C-20.5,5.0 -34.5,5.9 -45.0,35.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -11.0; 8.0 7.5 -11.0; -5.6 7.5 -11.0; 0 7.5 -11.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-11.0 C20.5,-31.0 34.5,-22.0 45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -5.0; 6.8 7.5 -5.0; -4.8 7.5 -5.0; 0 7.5 -5.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-5.0 C20.5,-19.0 39.5,-12.7 52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 1.0; 5.6 7.5 1.0; -3.9 7.5 1.0; 0 7.5 1.0" dur="1.6s" begin="0.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,1.0 C20.5,-7.0 39.5,-3.4 52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 7.0; 4.4 7.5 7.0; -3.1 7.5 7.0; 0 7.5 7.0" dur="1.6s" begin="0.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,7.0 C20.5,5.0 34.5,5.9 45.0,35.0" /></g>
+        <!-- abdomen -->
+        <ellipse cx="0" cy="8" rx="13" ry="16" fill="url(#abdomen)" />
+        <path d="M-5,2 Q0,10 5,2 M-6,10 Q0,18 6,10" stroke="#bb9af7"
+              stroke-width="1.4" fill="none" opacity=".55" stroke-linecap="round" />
+        <!-- cephalothorax -->
+        <ellipse cx="0" cy="-10" rx="9.5" ry="8.5" fill="url(#head)" />
+        <!-- eyes -->
+        <circle cx="-3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="-3.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="-3.1;-4.1;-3.1;-2.3;-3.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="4.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="4.1;3.1;4.1;4.9;4.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+        <circle cx="6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+      </g></g>
+    </g>
+  <g opacity=".75">
+      <animateTransform attributeName="transform" type="translate"
+        values="1060,292; -60,292"
+        dur="34s" begin="9s" repeatCount="indefinite" />
+      <g transform="scale(-0.34,0.34)"><g transform="scale(1.0)">
+        <!-- legs behind body -->
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -11.0; 8.0 -7.5 -11.0; -5.6 -7.5 -11.0; 0 -7.5 -11.0" dur="1.6s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-11.0 C-20.5,-31.0 -34.5,-22.0 -45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 -5.0; 6.8 -7.5 -5.0; -4.8 -7.5 -5.0; 0 -7.5 -5.0" dur="1.6s" begin="0.11s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,-5.0 C-20.5,-19.0 -39.5,-12.7 -52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 1.0; 5.6 -7.5 1.0; -3.9 -7.5 1.0; 0 -7.5 1.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,1.0 C-20.5,-7.0 -39.5,-3.4 -52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 -7.5 7.0; 4.4 -7.5 7.0; -3.1 -7.5 7.0; 0 -7.5 7.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M-7.5,7.0 C-20.5,5.0 -34.5,5.9 -45.0,35.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -11.0; 8.0 7.5 -11.0; -5.6 7.5 -11.0; 0 7.5 -11.0" dur="1.6s" begin="0.22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-11.0 C20.5,-31.0 34.5,-22.0 45.0,5.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 -5.0; 6.8 7.5 -5.0; -4.8 7.5 -5.0; 0 7.5 -5.0" dur="1.6s" begin="0.33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,-5.0 C20.5,-19.0 39.5,-12.7 52.0,15.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 1.0; 5.6 7.5 1.0; -3.9 7.5 1.0; 0 7.5 1.0" dur="1.6s" begin="0.44s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,1.0 C20.5,-7.0 39.5,-3.4 52.0,25.0" /></g>
+        <g><animateTransform attributeName="transform" type="rotate" values="0 7.5 7.0; 4.4 7.5 7.0; -3.1 7.5 7.0; 0 7.5 7.0" dur="1.6s" begin="0.55s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.33;0.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" /><path class="leg" d="M7.5,7.0 C20.5,5.0 34.5,5.9 45.0,35.0" /></g>
+        <!-- abdomen -->
+        <ellipse cx="0" cy="8" rx="13" ry="16" fill="url(#abdomen)" />
+        <path d="M-5,2 Q0,10 5,2 M-6,10 Q0,18 6,10" stroke="#bb9af7"
+              stroke-width="1.4" fill="none" opacity=".55" stroke-linecap="round" />
+        <!-- cephalothorax -->
+        <ellipse cx="0" cy="-10" rx="9.5" ry="8.5" fill="url(#head)" />
+        <!-- eyes -->
+        <circle cx="-3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="3.6" cy="-13" r="2.5" fill="#fff" />
+        <circle cx="-3.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="-3.1;-4.1;-3.1;-2.3;-3.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="4.1" cy="-12.6" r="1.25" fill="#1a1b27">
+          <animate attributeName="cx" values="4.1;3.1;4.1;4.9;4.1"
+                   dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+        <circle cx="6.6" cy="-9.2" r="1.1" fill="#7dcfff" opacity=".85" />
+      </g></g>
+    </g>
+</svg>
 </div>
-
-<!-- ===== PROFILE VIEWS + BADGES ===== -->
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=devmehedihasun&label=Profile%20Views&color=236ad3&style=for-the-badge" alt="Profile views" />
-  <a href="https://github.com/devmehedihasun?tab=repositories&sort=stargazers">
-    <img alt="Total Stars" title="GitHub Stars" src="https://custom-icon-badges.demolab.com/github/stars/devmehedihasun?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=Stars" />
-  </a>
-  <a href="https://github.com/devmehedihasun?tab=followers">
-    <img alt="Followers" title="GitHub Followers" src="https://custom-icon-badges.demolab.com/github/followers/devmehedihasun?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Followers&logoColor=white" />
-  </a>
-</div>
-
-<br>
-
-<!-- ===== ABOUT ME ===== -->
-## 🧑🏻‍💻 About Me
-
-```javascript
-const mehedi = {
-    location: "Dhaka, Bangladesh 🇧🇩",
-    role: "WordPress Theme Developer @ solvenixtech",
-    experience: "3+ years in web development",
-    track_record: "200+ websites | 95% client satisfaction | 90% 5-star",
-    currently_learning: ["WordPress Theme Dev", "React", "GSAP Animations"],
-    values: ["clean code", "teamwork", "clear client communication"],
-    mission: "Join a product-based company & keep growing 🚀"
-};
-```
-
-- 🔭 Currently building WordPress themes & modern frontends at **solvenixtech**
-- 🌱 Sharpening my skills in **WordPress Theme Development** and **Frontend (HTML, CSS, JavaScript, React, GSAP)**
-- 💬 Ask me about **WordPress, theme customization, and responsive frontend design**
-- ⚡ Fun fact: I've shipped **200+ websites** with a **90% 5-star rating**
-
-<br>
-
-<!-- ===== SKILLS ===== -->
-## 🚀 Skills & Technologies
-
-<div align="center">
-  <img alt="HTML" title="HTML5" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />&nbsp;&nbsp;
-  <img alt="CSS" title="CSS3" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />&nbsp;&nbsp;
-  <img alt="JavaScript" title="JavaScript" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />&nbsp;&nbsp;
-  <img alt="PHP" title="PHP" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />&nbsp;&nbsp;
-  <img alt="WordPress" title="WordPress" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg" />&nbsp;&nbsp;
-  <img alt="React" title="React" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />&nbsp;&nbsp;
-  <img alt="Next.js" title="Next.js" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />&nbsp;&nbsp;
-  <img alt="Bootstrap" title="Bootstrap" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />&nbsp;&nbsp;
-  <img alt="SASS" title="SASS" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />&nbsp;&nbsp;
-  <img alt="Git" title="Git" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />&nbsp;&nbsp;
-  <img alt="Figma" title="Figma" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-</div>
-
-<br>
-
-<!-- ===== GITHUB STATS ===== -->
-## 📊 GitHub Stats
-
-<div align="center">
-  <img height="180em" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=devmehedihasun&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&locale=en" />
-  <img height="180em" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devmehedihasun&theme=tokyonight&layout=compact&custom_title=Top%20Technologies&langs_count=9" />
-</div>
-
-<div align="center">
-  <img alt="GitHub Streak" src="https://streak-stats.demolab.com?user=devmehedihasun&theme=tokyonight&hide_border=false&date_format=M%20j%5B%2C%20Y%5D" />
-</div>
-
-<div align="center">
-  <img alt="Trophies" src="https://github-profile-trophy.vercel.app/?username=devmehedihasun&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7" />
-</div>
-
-<!-- ===== ACTIVITY GRAPH ===== -->
-<div align="center">
-  <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=devmehedihasun&theme=tokyo-night&hide_border=true&area=true" />
-</div>
-
-<br>
-
-<!-- ===== CONTRIBUTION SNAKE ===== -->
-<div align="center">
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/devmehedihasun/devmehedihasun/output/github-contribution-grid-snake-dark.svg" />
-</div>
-
-<br>
-
-<!-- ===== CONNECT ===== -->
-## 🤝 Connect With Me
-
-<div align="center">
-  <a href="https://linkedin.com/in/your-handle"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:your-email@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-55960c?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
-</div>
-
-<br>
-
-<!-- ===== FOOTER ===== -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:55960c,100:236ad3&height=120&section=footer" />
+<p class="note">The spider swings on its thread, its legs cycle, dew drops twinkle,
+and two small spiders crawl across the bottom edge.</p>
+</div></body></html>
