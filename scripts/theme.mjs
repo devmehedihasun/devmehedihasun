@@ -29,7 +29,7 @@ export const LANG = {
   JavaScript: { c: '#f0db4f', ink: '#1a1a1a', chip: 'JS' },
   TypeScript: { c: '#3178c6', ink: '#ffffff', chip: 'TS' },
   PHP:        { c: '#787cb5', ink: '#ffffff', chip: 'php' },
-  CSS:        { c: '#b07cc6', ink: '#ffffff', chip: 'CSS' },
+  CSS:        { c: '#1572b6', ink: '#ffffff', chip: 'CSS' },
   SCSS:       { c: '#cd6799', ink: '#ffffff', chip: 'SCSS' },
   HTML:       { c: '#e34c26', ink: '#ffffff', chip: 'HTML' },
   Python:     { c: '#3572a5', ink: '#ffffff', chip: 'PY' },
@@ -42,6 +42,7 @@ export const LANG = {
   'C++':      { c: '#f34b7d', ink: '#ffffff', chip: 'C+' },
   Ruby:       { c: '#701516', ink: '#ffffff', chip: 'RB' },
   Go:         { c: '#00add8', ink: '#ffffff', chip: 'GO' },
+  Less:       { c: '#2a4d80', ink: '#ffffff', chip: 'LESS' },
 };
 
 export const langOf = (name) =>

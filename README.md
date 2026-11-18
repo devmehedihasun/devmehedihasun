@@ -12,6 +12,8 @@
 
 <img width="100%" alt="About Mehedi Hasan — stack, location, followers and repository count" src="./assets/about.svg">
 
+<img width="100%" alt="Stack: React, Laravel, MongoDB, Vercel, WordPress, Framer" src="./assets/stack.svg">
+
 <!-- moons:start -->
 <a href="https://github.com/devmehedihasun/adlibbd"><img width="49%" alt="adlibbd" src="./assets/moon-1.svg"></a> <a href="https://github.com/devmehedihasun/ppc-birds"><img width="49%" alt="ppc-birds" src="./assets/moon-2.svg"></a>
 <!-- moons:end -->

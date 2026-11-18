@@ -1,6 +1,7 @@
 // The five panels. Each takes the shaped `data` object and returns an SVG string.
 
 import { T, langOf, esc, stars, wrap, truncate, panel, kicker, avatar, svg, textWidth } from './theme.mjs';
+import { LOGOS, LANG_LOGO, STACK, logoMark } from './logos.mjs';
 
 const rad = (deg) => (deg * Math.PI) / 180;
 
@@ -38,6 +39,10 @@ export function orbits(d) {
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="${(5 + i * 1.5).toFixed(1)}s" repeatCount="indefinite"/>
   </ellipse>`;
     const { c, ink, chip } = langOf(l.name);
+    const slug = LANG_LOGO[l.name];
+    const face = slug
+      ? logoMark(slug, 0, 0, 17, ink)
+      : `<text x="0" y="4" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 8 : 9.5}" fill="${ink}">${esc(chip)}</text>`;
     const label = `${l.name} ${l.pct}%`;
     // Outer orbits take longer to come round, the way real ones do.
     const period = (26 + i * 13).toFixed(0);
@@ -46,7 +51,7 @@ export function orbits(d) {
     <animateMotion dur="${period}s" repeatCount="indefinite" calcMode="linear" rotate="0" path="${orbitPath(rx, ry, angles[i % angles.length])}"/>
     <circle cx="0" cy="0" r="15" fill="${c}"/>
     <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
-    <text x="0" y="4" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 8 : 9.5}" fill="${ink}">${esc(chip)}</text>
+    ${face}
     <text x="0" y="32" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}" stroke="${T.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke">${esc(label)}</text>
   </g>`;
   });
@@ -203,11 +208,15 @@ export function planets(d) {
     ${rows.map((l, i) => {
       const y = top + i * rowH;
       const { c, ink, chip } = langOf(l.name);
+      const slug = LANG_LOGO[l.name];
       const fill = Math.max(6, (barW * l.pct) / 100);
+      const mark = slug
+        ? logoMark(slug, 49.5, y - 1.5, 12.5, ink)
+        : `<text x="49.5" y="${y + 2.5}" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 7 : 8.5}" fill="${ink}">${esc(chip)}</text>`;
       return `
     <g>
       <rect x="40" y="${y - 11}" width="19" height="19" rx="5" fill="${c}"/>
-      <text x="49.5" y="${y + 2.5}" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 7 : 8.5}" fill="${ink}">${esc(chip)}</text>
+      ${mark}
       <text x="70" y="${y + 3}" font-family="${T.sans}" font-weight="700" font-size="14" fill="${T.text}">${esc(l.name)}</text>
       <rect x="${barX}" y="${y - 5}" width="${barW}" height="10" rx="5" fill="#1b2335"/>
       <rect x="${barX}" y="${y - 5}" width="${fill.toFixed(1)}" height="10" rx="5" fill="${c}"/>
@@ -249,6 +258,42 @@ export function orbitLog(d) {
     ${stat('DAYS IN ORBIT', `${d.streak} days`, y0 + 4)}
     ${stat('LONGEST ORBIT', `${d.longest} days`, y0 + 48)}
     ${stat('REVOLUTIONS THIS YEAR', `${d.total}`, y0 + 92)}
+  </g>`;
+  return svg(W, H, body);
+}
+
+/* ------------------------------------------------------------------ *
+ * 6. STACK — the tools the work is built with, as brand marks
+ * ------------------------------------------------------------------ */
+export function stack(d) {
+  const W = T.W, H = 150;
+  const slugs = STACK;
+  const gap = (W - 80) / slugs.length;
+
+  const chips = slugs.map((slug, i) => {
+    const logo = LOGOS[slug];
+    const cx = 40 + gap * (i + 0.5);
+    const cy = 86;
+    // Each mark bobs on its own slow cycle, so the row breathes with the orbits.
+    const dur = (4.6 + (i % 3) * 0.9).toFixed(1);
+    const begin = (i * 0.7).toFixed(1);
+    return `
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" keyTimes="0;0.5;1" dur="${dur}s" begin="${begin}s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+      <circle cx="${cx.toFixed(1)}" cy="${cy}" r="26" fill="${logo.c}"/>
+      <circle cx="${cx.toFixed(1)}" cy="${cy - 5}" r="26" fill="#ffffff" opacity="0.10"/>
+      ${logoMark(slug, cx, cy, 27)}
+      <text x="${cx.toFixed(1)}" y="${cy + 46}" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}">${esc(logo.label)}</text>
+    </g>`;
+  }).join('');
+
+  const body = `
+  <defs><clipPath id="sframe"><rect width="${W}" height="${H}" rx="${T.radius}"/></clipPath></defs>
+  <g clip-path="url(#sframe)">
+    ${panel(W, H)}
+    ${stars(d.login + 'stack', W, H, 40, true)}
+    ${kicker('Stack', 40, 40)}
+    ${chips}
   </g>`;
   return svg(W, H, body);
 }

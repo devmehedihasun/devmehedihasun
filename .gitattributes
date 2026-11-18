@@ -1,0 +1,4 @@
+# Keep the working tree LF so the generated SVGs and the scripts stay byte-stable.
+* text=auto eol=lf
+*.png binary
+*.svg text eol=lf

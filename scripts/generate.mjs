@@ -8,7 +8,7 @@
 // view time — the README points at files committed in this repository.
 
 import { writeFile, mkdir, readFile } from 'node:fs/promises';
-import { orbits, about, moon, planets, orbitLog } from './panels.mjs';
+import { orbits, about, moon, planets, orbitLog, stack } from './panels.mjs';
 
 const USER = process.env.GH_USER || 'devmehedihasun';
 const TOKEN = process.env.GITHUB_TOKEN || '';
@@ -263,6 +263,7 @@ await Promise.all([
   write('about.svg', about(data)),
   write('planets.svg', planets(data)),
   write('orbit-log.svg', orbitLog(data)),
+  write('stack.svg', stack(data)),
   ...data.moons.map((r, i) => write(`moon-${i + 1}.svg`, moon(data, r, i + 1))),
 ]);
 
@@ -282,6 +283,6 @@ ${block}
 } catch { /* no README to update */ }
 
 console.log(
-  `wrote ${4 + data.moons.length} panels for @${data.login}` +
+  `wrote ${5 + data.moons.length} panels for @${data.login}` +
   `${DEMO ? ' (demo data)' : ''} — languages: ${data.languages.map((l) => `${l.name} ${l.pct}%`).join(', ')}`
 );
