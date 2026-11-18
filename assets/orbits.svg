@@ -18,17 +18,20 @@
   <ellipse cx="500" cy="205" rx="150.0" ry="51.0" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="5.0s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="500" cy="205" rx="216.0" ry="73.4" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
+  <ellipse cx="500" cy="205" rx="202.8" ry="69.0" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="6.5s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="500" cy="205" rx="282.0" ry="95.9" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
+  <ellipse cx="500" cy="205" rx="255.6" ry="86.9" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="8.0s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="500" cy="205" rx="348.0" ry="118.3" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
+  <ellipse cx="500" cy="205" rx="308.4" ry="104.9" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="9.5s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="500" cy="205" rx="414.0" ry="140.8" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
+  <ellipse cx="500" cy="205" rx="361.2" ry="122.8" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="11.0s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="500" cy="205" rx="414.0" ry="140.8" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
+    <animate attributeName="stroke-dashoffset" values="0;-9" dur="12.5s" repeatCount="indefinite"/>
   </ellipse>
     <circle cx="500" cy="205" r="132" fill="url(#glow)">
       <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
@@ -43,7 +46,7 @@
     <line x1="-10" y1="78" x2="148" y2="104" stroke="url(#tail)" stroke-width="1.6" stroke-linecap="round"/>
     <circle cx="148" cy="104" r="3.4" fill="#ffffff"/>
     <text x="158" y="104" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11.5" fill="#e9eefa" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">devmehedihasun</text>
-    <text x="158" y="119" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript · 35m ago</text>
+    <text x="158" y="119" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript · 1m ago</text>
   </g>
   <g opacity="0">
     <animateTransform attributeName="transform" type="translate" values="-39.5,-6.5;-39.5,-6.5;0.0,0.0;19.7,3.2;33.5,5.5;33.5,5.5" keyTimes="0.0000;0.3333;0.5000;0.6167;0.6667;1.0000" dur="21s" calcMode="linear" repeatCount="indefinite"/>
@@ -120,32 +123,39 @@
     <text x="0" y="32" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11" fill="#8b97ad" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript 40%</text>
   </g>
   <g>
-    <animateMotion dur="39s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M614.5 267.3A216.0 73.4 0 1 1 385.5 142.7A216.0 73.4 0 1 1 614.5 267.3"/>
+    <animateMotion dur="39s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M607.5 263.5A202.8 69.0 0 1 1 392.5 146.5A202.8 69.0 0 1 1 607.5 263.5"/>
     <circle cx="0" cy="0" r="15" fill="#787cb5"/>
     <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
     <g transform="translate(-8.50 -8.50) scale(0.7083)"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z" fill="#ffffff"/></g>
     <text x="0" y="32" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11" fill="#8b97ad" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">PHP 38%</text>
   </g>
   <g>
-    <animateMotion dur="52s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M255.8 252.9A282.0 95.9 0 1 1 744.2 157.1A282.0 95.9 0 1 1 255.8 252.9"/>
+    <animateMotion dur="52s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M278.6 248.5A255.6 86.9 0 1 1 721.4 161.5A255.6 86.9 0 1 1 278.6 248.5"/>
     <circle cx="0" cy="0" r="15" fill="#1572b6"/>
     <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
     <g transform="translate(-8.50 -8.50) scale(0.7083)"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" fill="#ffffff"/></g>
     <text x="0" y="32" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11" fill="#8b97ad" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">CSS 12%</text>
   </g>
   <g>
-    <animateMotion dur="65s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M801.4 145.8A348.0 118.3 0 1 1 198.6 264.2A348.0 118.3 0 1 1 801.4 145.8"/>
+    <animateMotion dur="65s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M767.1 152.6A308.4 104.9 0 1 1 232.9 257.4A308.4 104.9 0 1 1 767.1 152.6"/>
     <circle cx="0" cy="0" r="15" fill="#3178c6"/>
     <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
     <g transform="translate(-8.50 -8.50) scale(0.7083)"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" fill="#ffffff"/></g>
     <text x="0" y="32" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11" fill="#8b97ad" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">TypeScript 5%</text>
   </g>
   <g>
-    <animateMotion dur="78s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M893.7 248.5A414.0 140.8 0 1 1 106.3 161.5A414.0 140.8 0 1 1 893.7 248.5"/>
+    <animateMotion dur="78s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M843.5 242.9A361.2 122.8 0 1 1 156.5 167.1A361.2 122.8 0 1 1 843.5 242.9"/>
     <circle cx="0" cy="0" r="15" fill="#e34c26"/>
     <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
     <g transform="translate(-8.50 -8.50) scale(0.7083)"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" fill="#ffffff"/></g>
     <text x="0" y="32" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11" fill="#8b97ad" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">HTML 3%</text>
+  </g>
+  <g>
+    <animateMotion dur="91s" repeatCount="indefinite" calcMode="linear" rotate="0" path="M372.1 71.1A414.0 140.8 0 1 1 627.9 338.9A414.0 140.8 0 1 1 372.1 71.1"/>
+    <circle cx="0" cy="0" r="15" fill="#2a4d80"/>
+    <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
+    <g transform="translate(-8.50 -8.50) scale(0.7083)"><path d="M3.598 7.15a7.961 7.961 0 0 0-1.054.068c-.281.041-.52.124-.717.249a1.19 1.19 0 0 0-.45.497c-.098.208-.14.47-.14.802V10.3c0 .428-.084.732-.253.884-.169.166-.492.25-.984.25v1.16c.478 0 .815.083.984.249.169.166.253.47.253.912v1.548c0 .594.183 1.009.548 1.23.38.207.984.318 1.813.318v-1.078c-.393 0-.646-.07-.773-.194-.126-.124-.183-.373-.183-.746v-1.465c0-.373-.098-.663-.28-.87-.184-.208-.479-.374-.886-.484.393-.125.688-.29.871-.512.183-.22.281-.511.281-.87V9.167c0-.36.057-.608.183-.733.122-.12.412-.195.787-.2v4.547c0 .416.03.764.09 1.044.059.28.164.52.314.724.15.203.356.35.616.443.26.093.589.14.984.14.098 0 .205-.007.32-.02a5.336 5.336 0 0 0 .65-.107l-.036-.98c-.27.038-.492.057-.667.057-.353 0-.59-.092-.713-.276-.122-.183-.183-.534-.183-1.051V7.149H3.598zm16.818-.001v1.092c.393 0 .647.069.773.193.127.125.183.373.183.733v1.465c0 .359.098.65.28.87.184.222.479.387.872.512-.407.11-.702.276-.885.483-.183.208-.281.498-.281.871v1.465c0 .373-.057.622-.183.746-.126.125-.38.194-.773.194v1.078c.83 0 1.434-.11 1.813-.318.365-.221.548-.636.548-1.23v-1.548c0-.442.085-.746.253-.912.169-.166.506-.249.984-.249v-1.16c-.492 0-.815-.084-.984-.25-.168-.151-.253-.456-.253-.884V8.766c0-.332-.042-.594-.14-.801a1.19 1.19 0 0 0-.45-.498 1.828 1.828 0 0 0-.717-.249 7.252 7.252 0 0 0-1.04-.069zm-6.479 1.975c-.675 0-1.209.14-1.588.421-.38.281-.576.689-.576 1.209 0 .422.112.773.351 1.026s.618.478 1.152.688c.043.015.14.057.296.113.45.183.758.31.913.436a.592.592 0 0 1 .239.478c0 .224-.084.393-.253.506-.169.112-.408.168-.717.168-.295 0-.632-.056-.984-.155a3.901 3.901 0 0 1-.885-.337l-.14 1.04c.505.296 1.18.436 2.037.436.717 0 1.265-.155 1.659-.464.393-.309.59-.759.59-1.335 0-.436-.126-.787-.38-1.054-.252-.267-.632-.492-1.166-.689-.382-.15-.84-.277-1.209-.506a.465.465 0 0 1-.224-.421c0-.183.084-.324.239-.422.154-.098.365-.14.646-.14.506 0 1.026.126 1.574.379l.365-.956c-.562-.28-1.208-.421-1.939-.421zm4.512 0c-.675 0-1.21.14-1.589.421-.38.281-.576.689-.576 1.209 0 .422.112.773.351 1.026.24.253.619.478 1.153.688.042.015.14.057.295.113.45.183.759.31.914.436a.592.592 0 0 1 .238.478c0 .224-.084.393-.253.506-.168.112-.407.168-.716.168a3.72 3.72 0 0 1-.984-.155 3.904 3.904 0 0 1-.886-.337l-.14 1.04c.506.296 1.18.436 2.038.436.702 0 1.265-.155 1.686-.464.394-.309.59-.759.59-1.335 0-.436-.126-.787-.379-1.054s-.632-.492-1.166-.689c-.392-.153-.842-.277-1.209-.506a.465.465 0 0 1-.225-.421c0-.183.085-.324.24-.422.154-.098.364-.14.646-.14.506 0 1.026.126 1.574.379l.337-.956c-.562-.28-1.209-.421-1.94-.421zm-9.46.014c-.842 0-1.503.267-1.995.815-.492.548-.73 1.279-.73 2.192 0 .956.252 1.687.772 2.22.52.535 1.237.802 2.165.802.8 0 1.49-.183 2.08-.52l-.197-.984a3.66 3.66 0 0 1-1.813.492c-.492 0-.886-.155-1.167-.45-.28-.295-.435-.716-.45-1.25h3.852v-.591c0-.829-.225-1.49-.661-1.982-.45-.491-1.054-.744-1.855-.744zm-.013.983c.38 0 .674.127.885.38.211.253.323.618.323 1.082H7.67c.042-.492.182-.857.407-1.096.253-.239.548-.366.9-.366Z" fill="#ffffff"/></g>
+    <text x="0" y="32" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11" fill="#8b97ad" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Less 1%</text>
   </g>
     <text x="24" y="30" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-weight="700" font-size="11.5" letter-spacing="2.2" fill="#8b97ad">SOLAR SYSTEM &#183; @DEVMEHEDIHASUN</text>
     <text x="24" y="378" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10.5" fill="#5a6680">devmh.com</text>
