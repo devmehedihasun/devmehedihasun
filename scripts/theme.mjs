@@ -69,8 +69,9 @@ export function rng(seed) {
   };
 }
 
-// Scattered starfield, clipped to the panel.
-export function stars(seed, w, h, count = 90) {
+// Scattered starfield, clipped to the panel. With `twinkle`, every third star
+// breathes on its own cycle — declarative SMIL, so it animates inside an <img>.
+export function stars(seed, w, h, count = 90, twinkle = false) {
   const r = rng(seed);
   let out = '';
   for (let i = 0; i < count; i++) {
@@ -78,7 +79,12 @@ export function stars(seed, w, h, count = 90) {
     const y = +(r() * h).toFixed(1);
     const rad = +(r() * 1.1 + 0.3).toFixed(2);
     const o = +(r() * 0.5 + 0.12).toFixed(2);
-    out += `<circle cx="${x}" cy="${y}" r="${rad}" fill="#ffffff" opacity="${o}"/>`;
+    const dur = +(r() * 3.5 + 2.2).toFixed(1);
+    const begin = +(r() * 6).toFixed(1);
+    const bright = Math.min(1, o + 0.55).toFixed(2);
+    out += twinkle && i % 3 === 0
+      ? `<circle cx="${x}" cy="${y}" r="${rad}" fill="#ffffff" opacity="${o}"><animate attributeName="opacity" values="${o};${bright};${o}" dur="${dur}s" begin="${begin}s" repeatCount="indefinite"/></circle>`
+      : `<circle cx="${x}" cy="${y}" r="${rad}" fill="#ffffff" opacity="${o}"/>`;
   }
   return out;
 }

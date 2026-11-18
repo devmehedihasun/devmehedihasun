@@ -13,44 +13,92 @@ export function orbits(d) {
   const langs = d.languages.slice(0, 6);
 
   // One ellipse per language, innermost = most used.
-  const orbitRx = (i, n) => 96 + (i * (402 - 96)) / Math.max(1, n - 1 || 1);
+  const orbitRx = (i, n) => 150 + (i * (414 - 150)) / Math.max(1, n - 1 || 1);
   const squash = 0.34;
   const angles = [208, 58, 150, 330, 18, 252];
+
+  // A full ellipse written as two half arcs, starting at `deg` — the motion
+  // path a planet travels, so each one begins at its own point in the orbit.
+  const orbitPath = (rx, ry, deg) => {
+    const a = rad(deg);
+    const x0 = cx + rx * Math.cos(a), y0 = cy + ry * Math.sin(a);
+    const x1 = cx - rx * Math.cos(a), y1 = cy - ry * Math.sin(a);
+    const n = (v) => v.toFixed(1);
+    return `M${n(x0)} ${n(y0)}A${n(rx)} ${n(ry)} 0 1 1 ${n(x1)} ${n(y1)}A${n(rx)} ${n(ry)} 0 1 1 ${n(x0)} ${n(y0)}`;
+  };
 
   let rings = '';
   let planets = '';
   langs.forEach((l, i) => {
     const rx = orbitRx(i, langs.length);
     const ry = rx * squash;
-    rings += `<ellipse cx="${cx}" cy="${cy}" rx="${rx.toFixed(1)}" ry="${ry.toFixed(1)}" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85"/>`;
-    const a = rad(angles[i % angles.length]);
-    const px = cx + rx * Math.cos(a);
-    const py = cy + ry * Math.sin(a);
+    // The dashes drift round the ring; 9 is the dash period, so the loop is seamless.
+    rings += `
+  <ellipse cx="${cx}" cy="${cy}" rx="${rx.toFixed(1)}" ry="${ry.toFixed(1)}" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
+    <animate attributeName="stroke-dashoffset" values="0;-9" dur="${(5 + i * 1.5).toFixed(1)}s" repeatCount="indefinite"/>
+  </ellipse>`;
     const { c, ink, chip } = langOf(l.name);
     const label = `${l.name} ${l.pct}%`;
+    // Outer orbits take longer to come round, the way real ones do.
+    const period = (26 + i * 13).toFixed(0);
     planets += `
   <g>
-    <circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="15" fill="${c}"/>
-    <circle cx="${px.toFixed(1)}" cy="${(py - 4).toFixed(1)}" r="15" fill="#ffffff" opacity="0.10"/>
-    <text x="${px.toFixed(1)}" y="${(py + 4).toFixed(1)}" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 8 : 9.5}" fill="${ink}">${esc(chip)}</text>
-    <text x="${px.toFixed(1)}" y="${(py + 32).toFixed(1)}" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}">${esc(label)}</text>
+    <animateMotion dur="${period}s" repeatCount="indefinite" calcMode="linear" rotate="0" path="${orbitPath(rx, ry, angles[i % angles.length])}"/>
+    <circle cx="0" cy="0" r="15" fill="${c}"/>
+    <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
+    <text x="0" y="4" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 8 : 9.5}" fill="${ink}">${esc(chip)}</text>
+    <text x="0" y="32" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}" stroke="${T.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke">${esc(label)}</text>
   </g>`;
   });
 
-  // Comets: recently pushed repos, drawn as a streak with a head and a label.
+  // Comets: the repositories, newest push first. Each lane cycles through its
+  // share of them — one flies in, is named, fades, and the next takes over —
+  // so the whole list shows itself a few at a time instead of three fixed names.
   const lanes = [
-    { x1: -10, y1: 78, x2: 148, y2: 104, tx: 158, ty: 108, anchor: 'start' },
-    { x1: 712, y1: 40, x2: 576, y2: 74, tx: 566, ty: 78, anchor: 'end' },
-    { x1: -10, y1: 352, x2: 164, y2: 322, tx: 174, ty: 326, anchor: 'start' },
+    { x1: -10, y1: 78, x2: 148, y2: 104, tx: 158, ty: 104, anchor: 'start' },
+    { x1: 712, y1: 40, x2: 576, y2: 74, tx: 566, ty: 74, anchor: 'end' },
+    { x1: -10, y1: 352, x2: 164, y2: 322, tx: 174, ty: 322, anchor: 'start' },
   ];
-  const comets = d.comets.slice(0, 3).map((name, i) => {
-    const L = lanes[i];
-    return `
-  <g>
+  const feed = d.comets.slice(0, 9).map((c) => (typeof c === 'string' ? { name: c } : c));
+  const perLane = Math.max(1, Math.ceil(feed.length / lanes.length));
+  const FLIGHT = 7;                       // seconds one comet is on screen
+  const cycle = (perLane * FLIGHT).toFixed(0);
+
+  const comets = lanes.map((L, li) => {
+    const mine = feed.filter((_, i) => i % lanes.length === li);
+    if (!mine.length) return '';
+    // Travel direction of this lane, as a unit vector, so a streak slides along
+    // its own tail instead of drifting sideways.
+    const len = Math.hypot(L.x2 - L.x1, L.y2 - L.y1) || 1;
+    const ux = (L.x2 - L.x1) / len, uy = (L.y2 - L.y1) / len;
+    const at = (k) => `${(ux * k).toFixed(1)},${(uy * k).toFixed(1)}`;
+
+    return mine.map((repo, j) => {
+      const n = perLane;
+      const t0 = j / n, t1 = (j + 1) / n;
+      // One pass through this lane's slot, padded with hidden time either side
+      // so the whole lane loops once every `cycle` seconds.
+      const keys = [];
+      if (t0 > 0) keys.push([0, -40, 0], [t0, -40, 0]);
+      else keys.push([0, -40, 0]);
+      keys.push([t0 + 0.5 / n, 0, 1], [t0 + 0.85 / n, 20, 0.85]);
+      if (t1 < 1) keys.push([t1, 34, 0], [1, 34, 0]);
+      else keys.push([1, 34, 0]);
+      const keyTimes = keys.map((k) => k[0].toFixed(4)).join(';');
+      const shift = keys.map((k) => at(k[1])).join(';');
+      const fade = keys.map((k) => k[2]).join(';');
+      const meta = [repo.lang, repo.updated].filter(Boolean).join(' \u00b7 ');
+
+      return `
+  <g opacity="0">
+    <animateTransform attributeName="transform" type="translate" values="${shift}" keyTimes="${keyTimes}" dur="${cycle}s" calcMode="linear" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="${fade}" keyTimes="${keyTimes}" dur="${cycle}s" calcMode="linear" repeatCount="indefinite"/>
     <line x1="${L.x1}" y1="${L.y1}" x2="${L.x2}" y2="${L.y2}" stroke="url(#tail)" stroke-width="1.6" stroke-linecap="round"/>
     <circle cx="${L.x2}" cy="${L.y2}" r="3.4" fill="#ffffff"/>
-    <text x="${L.tx}" y="${L.ty}" text-anchor="${L.anchor}" font-family="${T.mono}" font-size="11" fill="${T.muted}">${esc(truncate(name, 11, 150, 'mono'))}</text>
+    <text x="${L.tx}" y="${L.ty}" text-anchor="${L.anchor}" font-family="${T.mono}" font-size="11.5" fill="${T.text}" stroke="${T.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke">${esc(truncate(repo.name, 11.5, 230, 'mono'))}</text>
+    <text x="${L.tx}" y="${L.ty + 15}" text-anchor="${L.anchor}" font-family="${T.mono}" font-size="10" fill="${T.faint}" stroke="${T.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke">${esc(truncate(meta, 10, 230, 'mono'))}</text>
   </g>`;
+    }).join('');
   }).join('');
 
   const body = `
@@ -68,12 +116,17 @@ export function orbits(d) {
   </defs>
   <g clip-path="url(#frame)">
     <rect width="${W}" height="${H}" fill="${T.bg}"/>
-    ${stars(d.login + 'orbits', W, H, 120)}
+    ${stars(d.login + 'orbits', W, H, 120, true)}
     ${rings}
-    <circle cx="${cx}" cy="${cy}" r="132" fill="url(#glow)"/>
+    <circle cx="${cx}" cy="${cy}" r="132" fill="url(#glow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="${cx}" cy="${cy}" r="42" fill="none" stroke="${T.gold}" stroke-width="1.2" stroke-dasharray="2 9" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0 ${cx} ${cy}" to="360 ${cx} ${cy}" dur="26s" repeatCount="indefinite"/>
+    </circle>
     ${comets}
-    ${planets}
     ${avatar('sun', cx, cy, 31, d.avatarDataUri, d.initials)}
+    ${planets}
     <text x="24" y="30" font-family="${T.mono}" font-weight="700" font-size="11.5" letter-spacing="2.2" fill="${T.muted}">SOLAR SYSTEM &#183; @${esc(d.login.toUpperCase())}</text>
     <text x="24" y="${H - 22}" font-family="${T.mono}" font-size="10.5" fill="${T.faint}">${esc(d.footerMark)}</text>
     <text x="${W - 24}" y="${H - 22}" text-anchor="end" font-family="${T.mono}" font-size="10.5" fill="${T.faint}">planets = languages &#183; moons = repos &#183; comets = recent pushes</text>
