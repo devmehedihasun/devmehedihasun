@@ -1,7 +1,7 @@
 // The five panels. Each takes the shaped `data` object and returns an SVG string.
 
 import { T, langOf, esc, stars, wrap, truncate, panel, kicker, avatar, svg, textWidth } from './theme.mjs';
-import { LOGOS, LANG_LOGO, STACK, logoMark } from './logos.mjs';
+import { LOGOS, LANG_LOGO, ORBIT, STACK, logoMark } from './logos.mjs';
 
 const rad = (deg) => (deg * Math.PI) / 180;
 
@@ -11,15 +11,27 @@ const rad = (deg) => (deg * Math.PI) / 180;
 export function orbits(d) {
   const W = T.W, H = 400;
   const cx = W / 2, cy = 205;
-  const langs = d.languages.slice(0, 6);
+  // The bodies in orbit are a fixed set (ORBIT); a language among them shows
+  // its real share, the rest are named on their own.
+  const share = Object.fromEntries(d.languages.map((l) => [l.name, l.pct]));
+  const bodies = ORBIT.map(({ slug, lang }) => {
+    const logo = LOGOS[slug];
+    const pct = lang ? share[lang] : undefined;
+    return {
+      slug,
+      c: logo.c,
+      ink: logo.ink,
+      label: pct ? `${logo.label} ${pct}%` : logo.label,
+    };
+  });
 
-  // One ellipse per language, innermost = most used.
-  const orbitRx = (i, n) => 150 + (i * (414 - 150)) / Math.max(1, n - 1 || 1);
+  // One ellipse per body, innermost first.
+  const orbitRx = (i, n) => 206 + (i * (420 - 206)) / Math.max(1, n - 1 || 1);
   const squash = 0.34;
   const angles = [208, 58, 150, 330, 18, 252];
 
   // A full ellipse written as two half arcs, starting at `deg` — the motion
-  // path a planet travels, so each one begins at its own point in the orbit.
+  // path a body travels, so each one begins at its own point in the orbit.
   const orbitPath = (rx, ry, deg) => {
     const a = rad(deg);
     const x0 = cx + rx * Math.cos(a), y0 = cy + ry * Math.sin(a);
@@ -30,29 +42,23 @@ export function orbits(d) {
 
   let rings = '';
   let planets = '';
-  langs.forEach((l, i) => {
-    const rx = orbitRx(i, langs.length);
+  bodies.forEach((b, i) => {
+    const rx = orbitRx(i, bodies.length);
     const ry = rx * squash;
     // The dashes drift round the ring; 9 is the dash period, so the loop is seamless.
     rings += `
   <ellipse cx="${cx}" cy="${cy}" rx="${rx.toFixed(1)}" ry="${ry.toFixed(1)}" fill="none" stroke="#273049" stroke-width="1" stroke-dasharray="3 6" opacity="0.85">
     <animate attributeName="stroke-dashoffset" values="0;-9" dur="${(5 + i * 1.5).toFixed(1)}s" repeatCount="indefinite"/>
   </ellipse>`;
-    const { c, ink, chip } = langOf(l.name);
-    const slug = LANG_LOGO[l.name];
-    const face = slug
-      ? logoMark(slug, 0, 0, 17, ink)
-      : `<text x="0" y="4" text-anchor="middle" font-family="${T.mono}" font-weight="700" font-size="${chip.length > 3 ? 8 : 9.5}" fill="${ink}">${esc(chip)}</text>`;
-    const label = `${l.name} ${l.pct}%`;
     // Outer orbits take longer to come round, the way real ones do.
     const period = (26 + i * 13).toFixed(0);
     planets += `
   <g>
     <animateMotion dur="${period}s" repeatCount="indefinite" calcMode="linear" rotate="0" path="${orbitPath(rx, ry, angles[i % angles.length])}"/>
-    <circle cx="0" cy="0" r="15" fill="${c}"/>
-    <circle cx="0" cy="-4" r="15" fill="#ffffff" opacity="0.10"/>
-    ${face}
-    <text x="0" y="32" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}" stroke="${T.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke">${esc(label)}</text>
+    <circle cx="0" cy="0" r="16" fill="${b.c}"/>
+    <circle cx="0" cy="-4" r="16" fill="#ffffff" opacity="0.10"/>
+    ${logoMark(b.slug, 0, 0, 18, b.ink)}
+    <text x="0" y="33" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}" stroke="${T.bg}" stroke-width="3" stroke-linejoin="round" paint-order="stroke">${esc(b.label)}</text>
   </g>`;
   });
 
@@ -134,7 +140,7 @@ export function orbits(d) {
     ${planets}
     <text x="24" y="30" font-family="${T.mono}" font-weight="700" font-size="11.5" letter-spacing="2.2" fill="${T.muted}">SOLAR SYSTEM &#183; @${esc(d.login.toUpperCase())}</text>
     <text x="24" y="${H - 22}" font-family="${T.mono}" font-size="10.5" fill="${T.faint}">${esc(d.footerMark)}</text>
-    <text x="${W - 24}" y="${H - 22}" text-anchor="end" font-family="${T.mono}" font-size="10.5" fill="${T.faint}">planets = languages &#183; moons = repos &#183; comets = recent pushes</text>
+    <text x="${W - 24}" y="${H - 22}" text-anchor="end" font-family="${T.mono}" font-size="10.5" fill="${T.faint}">planets = the stack &#183; moons = repos &#183; comets = recent pushes</text>
   </g>`;
   return svg(W, H, body);
 }
@@ -266,33 +272,38 @@ export function orbitLog(d) {
  * 6. STACK — the tools the work is built with, as brand marks
  * ------------------------------------------------------------------ */
 export function stack(d) {
-  const W = T.W, H = 150;
-  const slugs = STACK;
-  const gap = (W - 80) / slugs.length;
+  const W = T.W, perRow = 7, r = 25;
+  const rows = [];
+  for (let i = 0; i < STACK.length; i += perRow) rows.push(STACK.slice(i, i + perRow));
+  const rowH = 88, top = 92;
+  const H = top + (rows.length - 1) * rowH + 60;
+  const gap = (W - 80) / perRow;
 
-  const chips = slugs.map((slug, i) => {
+  const chips = rows.map((row, ri) => row.map((slug, ci) => {
     const logo = LOGOS[slug];
-    const cx = 40 + gap * (i + 0.5);
-    const cy = 86;
-    // Each mark bobs on its own slow cycle, so the row breathes with the orbits.
-    const dur = (4.6 + (i % 3) * 0.9).toFixed(1);
-    const begin = (i * 0.7).toFixed(1);
+    // Rows are centred, so a short last row sits under the middle of the strip.
+    const x = 40 + gap * (ci + 0.5) + ((perRow - row.length) * gap) / 2;
+    const y = top + ri * rowH;
+    const n = ri * perRow + ci;
+    // Each mark bobs on its own slow cycle, so the strip breathes with the orbits.
+    const dur = (4.6 + (n % 4) * 0.8).toFixed(1);
+    const begin = ((n % 7) * 0.6).toFixed(1);
     return `
     <g>
       <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" keyTimes="0;0.5;1" dur="${dur}s" begin="${begin}s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
-      <circle cx="${cx.toFixed(1)}" cy="${cy}" r="26" fill="${logo.c}"/>
-      <circle cx="${cx.toFixed(1)}" cy="${cy - 5}" r="26" fill="#ffffff" opacity="0.10"/>
-      ${logoMark(slug, cx, cy, 27)}
-      <text x="${cx.toFixed(1)}" y="${cy + 46}" text-anchor="middle" font-family="${T.mono}" font-size="11" fill="${T.muted}">${esc(logo.label)}</text>
+      <circle cx="${x.toFixed(1)}" cy="${y}" r="${r}" fill="${logo.c}"/>
+      <circle cx="${x.toFixed(1)}" cy="${y - 5}" r="${r}" fill="#ffffff" opacity="0.10"/>
+      ${logoMark(slug, x, y, 26, logo.ink)}
+      <text x="${x.toFixed(1)}" y="${y + 44}" text-anchor="middle" font-family="${T.mono}" font-size="10.5" fill="${T.muted}">${esc(logo.label)}</text>
     </g>`;
-  }).join('');
+  }).join('')).join('');
 
   const body = `
   <defs><clipPath id="sframe"><rect width="${W}" height="${H}" rx="${T.radius}"/></clipPath></defs>
   <g clip-path="url(#sframe)">
     ${panel(W, H)}
-    ${stars(d.login + 'stack', W, H, 40, true)}
-    ${kicker('Stack', 40, 40)}
+    ${stars(d.login + 'stack', W, H, 60, true)}
+    ${kicker('Stack', 40, 44)}
     ${chips}
   </g>`;
   return svg(W, H, body);

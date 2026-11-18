@@ -6,13 +6,13 @@
   remote images inside an SVG), so both work with no JavaScript and no requests.
 -->
 
-<img width="100%" alt="Mehedi Hasan's languages as planets orbiting his avatar" src="./assets/orbits.svg">
+<img width="100%" alt="HTML5, CSS3, JavaScript, React, Next.js and WordPress orbiting Mehedi Hasan's avatar" src="./assets/orbits.svg">
 
-<sub>I am the sun; my languages are the planets and my projects their moons.</sub>
+<sub>I am the sun; my stack are the planets and my projects their moons.</sub>
 
 <img width="100%" alt="About Mehedi Hasan — stack, location, followers and repository count" src="./assets/about.svg">
 
-<img width="100%" alt="Stack: React, Laravel, MongoDB, Vercel, WordPress, Framer" src="./assets/stack.svg">
+<img width="100%" alt="Stack: HTML5, CSS3, Sass, JavaScript, jQuery, PHP, React, Next.js, Laravel, Bootstrap, Tailwind CSS, MongoDB, Vercel, Git, GitHub, Python, MySQL, Wix, Shopify" src="./assets/stack.svg">
 
 <!-- moons:start -->
 <a href="https://github.com/devmehedihasun/adlibbd"><img width="49%" alt="adlibbd" src="./assets/moon-1.svg"></a> <a href="https://github.com/devmehedihasun/ppc-birds"><img width="49%" alt="ppc-birds" src="./assets/moon-2.svg"></a>

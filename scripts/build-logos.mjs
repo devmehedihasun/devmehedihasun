@@ -13,20 +13,33 @@ import { readFileSync, writeFileSync } from 'node:fs';
 const DIR = process.argv[2] || '';
 const CDN = 'https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons';
 
-// slug -> [label, disc colour, ink on that disc]
+// slug -> [label, disc colour, ink on that disc]. Marks that are black in the
+// original (Next.js, Vercel, GitHub) get a near-white disc so they read on the
+// dark panels.
 const SET = {
-  html5:      ['HTML',       '#e34c26', '#ffffff'],
-  css3:       ['CSS',        '#1572b6', '#ffffff'],
-  javascript: ['JavaScript', '#f0db4f', '#1a1a1a'],
-  typescript: ['TypeScript', '#3178c6', '#ffffff'],
-  php:        ['PHP',        '#787cb5', '#ffffff'],
-  less:       ['Less',       '#2a4d80', '#ffffff'],
-  react:      ['React',      '#61dafb', '#0b2a33'],
-  laravel:    ['Laravel',    '#ff2d20', '#ffffff'],
-  mongodb:    ['MongoDB',    '#47a248', '#ffffff'],
-  vercel:     ['Vercel',     '#f2f3f5', '#0b0e14'],
-  wordpress:  ['WordPress',  '#21759b', '#ffffff'],
-  framer:     ['Framer',     '#0055ff', '#ffffff'],
+  html5:       ['HTML5',        '#e34c26', '#ffffff'],
+  css3:        ['CSS3',         '#1572b6', '#ffffff'],
+  sass:        ['Sass',         '#cc6699', '#ffffff'],
+  javascript:  ['JavaScript',   '#f0db4f', '#1a1a1a'],
+  jquery:      ['jQuery',       '#0769ad', '#ffffff'],
+  php:         ['PHP',          '#787cb5', '#ffffff'],
+  react:       ['React',        '#61dafb', '#0b2a33'],
+  nextdotjs:   ['Next.js',      '#f2f3f5', '#0b0e14'],
+  laravel:     ['Laravel',      '#ff2d20', '#ffffff'],
+  bootstrap:   ['Bootstrap',    '#7952b3', '#ffffff'],
+  tailwindcss: ['Tailwind CSS', '#06b6d4', '#ffffff'],
+  mongodb:     ['MongoDB',      '#47a248', '#ffffff'],
+  vercel:      ['Vercel',       '#f2f3f5', '#0b0e14'],
+  git:         ['Git',          '#f05032', '#ffffff'],
+  github:      ['GitHub',       '#f2f3f5', '#0b0e14'],
+  python:      ['Python',       '#3776ab', '#ffffff'],
+  mysql:       ['MySQL',        '#4479a1', '#ffffff'],
+  wix:         ['Wix',          '#0c6efc', '#ffffff'],
+  shopify:     ['Shopify',      '#7ab55c', '#ffffff'],
+  wordpress:   ['WordPress',    '#21759b', '#ffffff'],
+  framer:      ['Framer',       '#0055ff', '#ffffff'],
+  typescript:  ['TypeScript',   '#3178c6', '#ffffff'],
+  less:        ['Less',         '#2a4d80', '#ffffff'],
 };
 
 const source = async (slug) => {
@@ -56,15 +69,32 @@ ${rows.join('\n')}
 export const LANG_LOGO = {
   HTML: 'html5',
   CSS: 'css3',
-  SCSS: 'css3',
+  SCSS: 'sass',
+  Sass: 'sass',
   JavaScript: 'javascript',
   TypeScript: 'typescript',
   PHP: 'php',
   Less: 'less',
+  Python: 'python',
 };
 
-// The stack that is not a language in any repo but is what the work is built on.
-export const STACK = ['react', 'laravel', 'mongodb', 'vercel', 'wordpress', 'framer'];
+// The bodies that orbit the sun, innermost first. A language among them picks
+// up its real share from the API; the rest are named on their own.
+export const ORBIT = [
+  { slug: 'html5', lang: 'HTML' },
+  { slug: 'css3', lang: 'CSS' },
+  { slug: 'javascript', lang: 'JavaScript' },
+  { slug: 'react' },
+  { slug: 'nextdotjs' },
+  { slug: 'wordpress' },
+];
+
+// Everything the work is built with, for the Stack strip.
+export const STACK = [
+  'html5', 'css3', 'sass', 'javascript', 'jquery', 'php', 'react',
+  'nextdotjs', 'laravel', 'bootstrap', 'tailwindcss', 'mongodb', 'vercel',
+  'git', 'github', 'python', 'mysql', 'wix', 'shopify',
+];
 
 // A glyph centred on (x, y), sized to \`size\` in user units.
 export function logoMark(slug, x, y, size, fill) {
