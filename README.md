@@ -15,7 +15,7 @@
 <img width="100%" alt="Stack: HTML5, CSS3, Sass, JavaScript, jQuery, PHP, React, Next.js, Laravel, Bootstrap, Tailwind CSS, MongoDB, Vercel, Git, GitHub, Python, MySQL, Wix, Shopify" src="./assets/stack.svg">
 
 <!-- moons:start -->
-<a href="https://github.com/devmehedihasun/adlibbd"><img width="49%" alt="adlibbd" src="./assets/moon-1.svg"></a> <a href="https://github.com/devmehedihasun/ppc-birds"><img width="49%" alt="ppc-birds" src="./assets/moon-2.svg"></a>
+<a href="https://github.com/devmehedihasun/2d-animation-video-Claude-skill"><img width="49%" alt="2d-animation-video-Claude-skill" src="./assets/moon-1.svg"></a> <a href="https://github.com/devmehedihasun/adlibbd"><img width="49%" alt="adlibbd" src="./assets/moon-2.svg"></a>
 <!-- moons:end -->
 
 <img width="100%" alt="Language share: JavaScript, PHP, CSS, TypeScript, HTML" src="./assets/planets.svg">
