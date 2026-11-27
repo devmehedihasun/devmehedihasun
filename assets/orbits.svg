@@ -46,7 +46,7 @@
     <line x1="-10" y1="78" x2="148" y2="104" stroke="url(#tail)" stroke-width="1.6" stroke-linecap="round"/>
     <circle cx="148" cy="104" r="3.4" fill="#ffffff"/>
     <text x="158" y="104" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11.5" fill="#e9eefa" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">devmehedihasun</text>
-    <text x="158" y="119" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript · 24h ago</text>
+    <text x="158" y="119" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript · 1d ago</text>
   </g>
   <g opacity="0">
     <animateTransform attributeName="transform" type="translate" values="-39.5,-6.5;-39.5,-6.5;0.0,0.0;19.7,3.2;33.5,5.5;33.5,5.5" keyTimes="0.0000;0.3333;0.5000;0.6167;0.6667;1.0000" dur="21s" calcMode="linear" repeatCount="indefinite"/>
@@ -70,7 +70,7 @@
     <line x1="712" y1="40" x2="576" y2="74" stroke="url(#tail)" stroke-width="1.6" stroke-linecap="round"/>
     <circle cx="576" cy="74" r="3.4" fill="#ffffff"/>
     <text x="566" y="74" text-anchor="end" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11.5" fill="#e9eefa" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">2d-animation-video-Claude-skill</text>
-    <text x="566" y="89" text-anchor="end" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">TypeScript · 4d ago</text>
+    <text x="566" y="89" text-anchor="end" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">TypeScript · 5d ago</text>
   </g>
   <g opacity="0">
     <animateTransform attributeName="transform" type="translate" values="38.8,-9.7;38.8,-9.7;0.0,0.0;-19.4,4.9;-33.0,8.2;-33.0,8.2" keyTimes="0.0000;0.3333;0.5000;0.6167;0.6667;1.0000" dur="21s" calcMode="linear" repeatCount="indefinite"/>
@@ -94,7 +94,7 @@
     <line x1="-10" y1="352" x2="164" y2="322" stroke="url(#tail)" stroke-width="1.6" stroke-linecap="round"/>
     <circle cx="164" cy="322" r="3.4" fill="#ffffff"/>
     <text x="174" y="322" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="11.5" fill="#e9eefa" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">adlibbd</text>
-    <text x="174" y="337" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript · 2w ago</text>
+    <text x="174" y="337" text-anchor="start" font-family="ui-monospace,'SFMono-Regular','Menlo','Consolas','Liberation Mono',monospace" font-size="10" fill="#5a6680" stroke="#070b14" stroke-width="3" stroke-linejoin="round" paint-order="stroke">JavaScript · 3w ago</text>
   </g>
   <g opacity="0">
     <animateTransform attributeName="transform" type="translate" values="-39.4,6.8;-39.4,6.8;0.0,0.0;19.7,-3.4;33.5,-5.8;33.5,-5.8" keyTimes="0.0000;0.3333;0.5000;0.6167;0.6667;1.0000" dur="21s" calcMode="linear" repeatCount="indefinite"/>
